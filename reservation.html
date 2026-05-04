@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservierung | Murdock's Irish Pub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Murdock's</a>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="hamburger">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </label>
+            <ul class="nav-links">
+                <li><a href="index.html">Startseite</a></li>
+                <li><a href="menu.html">Speisekarte</a></li>
+                <li><a href="events.html">Events & Sport</a></li>
+                <li><a href="jobs.html">Jobs</a></li> <!-- NEU -->
+            </ul>
+            <!-- Der CTA-Button bleibt hier natürlich auf der Seite selbst -->
+            <a href="reservation.html" class="btn btn-primary nav-cta">Tisch reservieren</a>
+        </div>
+    </nav>
+
+    <header class="page-header bg-reservation">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Tisch reservieren</h1>
+        </div>
+    </header>
+
+    <section class="grid-section">
+        <div class="container">
+            
+            <div class="reservation-box">
+                <p class="res-subtitle">Sichere dir deinen Platz im Pub. Für Gruppen ab 8 Personen bitte telefonisch oder per E-Mail melden.</p>
+                
+                <div id="success-message" class="success-message">
+                    <h3>✅ Anfrage erfolgreich gesendet!</h3>
+                    <p>Vielen Dank. Wir prüfen unsere Kapazitäten und melden uns schnellstmöglich bei dir.</p>
+                    <a href="reservation.html" class="btn btn-secondary" style="margin-top: 20px;">Neue Reservierung</a>
+                </div>
+
+                <form id="reservation-form" class="reservation-form" action="#success-message">
+                    
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" required placeholder="Max Mustermann">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-Mail *</label>
+                        <input type="email" id="email" required placeholder="max@beispiel.de">
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="date">Datum *</label>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="time">Uhrzeit *</label>
+                            <input type="time" id="time" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guests">Anzahl Personen *</label>
+                        <select id="guests" required>
+                            <option value="2" selected>2 Personen</option>
+                            <option value="3">3 Personen</option>
+                            <option value="4">4 Personen</option>
+                            <option value="5">5 Personen</option>
+                            <option value="6">6 Personen</option>
+                            <option value="7">7 Personen</option>
+                            <option value="8">8 Personen</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Besondere Wünsche (optional)</label>
+                        <textarea id="message" rows="3" placeholder="Z.B. Platz nah am Bildschirm, drinnen/draußen..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary full-width">Jetzt anfragen</button>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer OHNE Karte -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <h3>Kontakt & Murdock's Irish Pub</h3>
+                <p>Am Roten Tor 8<br>86150 Augsburg</p>
+                <p>Email: <a href="mailto:info@irishpubmurdocks.de">info@irishpubmurdocks.de</a></p>
+                <br>
+                <h3>Folge uns</h3>
+                <p>
+                    <a href="#">Instagram</a> | <a href="#">Facebook</a>
+                </p>
+            </div>
+            <div class="footer-col">
+                <h3>Öffnungszeiten</h3>
+                <ul class="hours-list">
+                    <li><span>Montag</span> <span>Geschlossen</span></li>
+                    <li><span>Di - Do</span> <span>17:00 - 01:00</span></li>
+                    <li><span>Fr - Sa</span> <span>17:00 - 02:00</span></li>
+                    <li><span>Sonntag</span> <span>13:00 - 24:00</span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Murdock's Irish Pub.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
